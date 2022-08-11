@@ -16,7 +16,7 @@
       }
 
       body {
-        background: linear-gradient(-45deg, #412a7e, #1d1434, #1a152c, #0f0823);
+        background: linear-gradient(-45deg, #fff, #fff, #fff, #fff);
         background-size: 400% 400%;
         animation: gradient 60s ease infinite;
       }
@@ -55,8 +55,8 @@
       }
 
       #header {
-        font-size: 8vmin;
-        background: -webkit-linear-gradient(45deg, #b577eb, #f6b8d0);
+        font-size: 55px;
+        background: -webkit-linear-gradient(45deg, #4CAF50, #f6b8d0);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 20px;
@@ -66,15 +66,46 @@
         margin: 0;
         padding: 0;
       }
-
+      
+      button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+}
 
 
     </style>
   </head>
   <body>
-        <h2 id="header">Frases</h2>
-        <button value="pedir_frase" type ="button" >Clique</button>
+        <h1 id="header">Frases</h1>
+        <h2>Clique no botão para obter uma frase motivacional</h2>
+        <button value="pedir_frase" type ="button" 
+        onclick="fraseAleatoria()"
+        >:)</button>
+        <p id ='demo'></p>
+        <text>Dupla: Renata e Jefferson - 914</text>
       </div>
+  <script>
+    function fraseAleatoria () {
+    var r_text = new Array (); 
+    r_text[0] = "O êxito é a somatória dos pequenos esforços repetidos diariamente";
+    r_text[1] = "Para quem está iluminado, os dias de luz sempre retornam"; 
+    r_text[2] = "Conheci o pior das pessoas e o melhor de mim, passando por tempos difíceis"; 
+    r_text[3] = "Você não vai encontrar ninguém para sorrir por ti, então não deixe de sorrir"; 
+    r_text[4] = "Mesmo que nem todo dia seja bom, há algo de bom todo dia"; 
+    r_text[5] = "Em dias difíceis, lembre-se do que Deus já fez por ti. Recorde o que pode te oferecer esperança"
+    r_text[6] = "Da mesma forma que a felicidade não dura para sempre, a tristeza também não"
+    r_text[7] = "A maior prova de que você pode fazer o impossível, é superar circunstâncias difíceis”"
+    r_text[8] = "É em meio a dificuldade que se encontra a oportunidade"
+    var i = Math.floor(r_text.length * Math.random()); 
+    document.getElementById("demo").innerHTML = (r_text[i]);
+    } 
 
+  </script>
   </body>
 </html>
